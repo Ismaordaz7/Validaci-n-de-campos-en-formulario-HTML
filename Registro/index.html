@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro </title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Practica Validacion</h1>
+        <h2 class="subtitle">Registro de Usuario</h2>
+        
+        <form action="" method="get">
+            <label for="numTrab">Numero de Trabajador</label>
+            <input class="input" type="number"
+            pattern="^\+[0-9]{1,15}$"
+            title="Debe seguir el formato internacional, 
+            comenzando con el signo + y tener hasta 15 dígitos"
+            placeholder="Numero de trabajador"
+            name="numTrab" id="numTrab" required>
+            
+            <label for="name">Nombre del Usuario :</label>
+            <input type="text" class="input" required
+            placeholder="Nombre" maxlength="25" pattern="[A-Za-z0-9]{5,15}"
+            title="Debe tener entre 5 y 15 caracteres alfanuméricos">
+            
+
+            <label for="app">Apellido Paterno :</label>
+            <input type="text" class="input" required
+            placeholder="Apelido Parterno" maxlength="25"
+            pattern="[A-Za-z0-9]{5,15}"
+            title="Debe tener entre 5 y 15 caracteres alfanuméricos">
+
+            <label for="apm">Apellido Materno :</label>
+            <input type="text" class="input" required
+            placeholder="Apelido Marterno" maxlength="25"
+            pattern="[A-Za-z0-9]{5,15}"
+            title="Debe tener entre 5 y 15 caracteres alfanuméricos">
+
+            <label for="fechanac">Fecha de Nacimiento:</label>
+            <input type="date" class="input" id="fechanac" name="fechanac" required
+            placeholder="YYYY-MM-DD"
+            min="1900-01-01" max="2006-01-01">
+
+
+            <label for="edad">Edad :</label>
+            <input type="number" class="input " required
+           min="18" max="55"
+           pattern="[1-9]{2}?" placeholder="Edad"
+           title="Debe ser un número entre 18 y 99">
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email"
+            class="input" required maxlegth="50"
+            placeholder="Email"
+            pattern="a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+            title="Debe ser una dirección de correo electrónico válida">
+
+            <label for="cp">Codigo Postal :</label>
+            <input type="text" class="input" id="cp" name="cp" required
+            pattern="[0-9]{5}"
+            title="Debe cosistir en exactamente 5 dígitos"
+            placeholder="12345">
+            
+
+             <label for="pass">Password:</label>
+             <input type="password" class="input" minlength="8"
+             required placeholder="Password" maxlength="20"
+            pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}"
+             name="pass" id="pass"
+             title="Debe tener al menos 8 caracteres, incluyendo al menos una letra mayúscula, una minúscula, un número y un carácter especial (!, @, #, etc.).">
+
+
+             <label for="pass2">Confirmar Password:</label>
+             <input type="password" class="input" minlength="8"
+             required placeholder="Confirmar Password" maxlength="20"
+             name="pass2" id="pass">
+
+
+            <input type="submit" class="button">
+
+        </form>
+        <script src="./main.js"></script>
+
+    </div>
+
+</body>
+</html>
+
+
